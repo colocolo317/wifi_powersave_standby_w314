@@ -1,0 +1,68 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: wifi_powersave_standby_associated_soc_441
+label: wifi_powersave_standby_associated_soc_441
+description: "Start a Wi-Fi client in ASSOCIATED_POWER_SAVE mode and connects to AP\
+  \ and send data to UDP server \n"
+category: Example|Wi-Fi
+filter:
+- name: Project Difficulty
+  value: [Beginner]
+- name: Wireless Technology
+  value: [Wi-Fi]
+package: wifi
+quality: production
+readme:
+- {path: readme.md}
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+sdk: {id: gecko_sdk, version: 4.4.1}
+toolchain_settings:
+- {value: -Wall -Werror, option: gcc_compiler_option}
+component:
+- {from: wiseconnect3_sdk, id: SIWG917M111MGTBA}
+- {from: wiseconnect3_sdk, id: basic_network_config_manager}
+- {from: wiseconnect3_sdk, id: brd4338a}
+- {from: wiseconnect3_sdk, id: bsd_socket}
+- {from: wiseconnect3_sdk, id: network_manager}
+- {from: wiseconnect3_sdk, id: si917_memory_default_config}
+- {from: wiseconnect3_sdk, id: sl_si91x_internal_stack}
+- {from: wiseconnect3_sdk, id: sl_si91x_mem_pool_buffers}
+- {from: wiseconnect3_sdk, id: sllib_m4_power_save}
+- {from: wiseconnect3_sdk, id: syscalls}
+- {from: wiseconnect3_sdk, id: wifi}
+- {from: wiseconnect3_sdk, id: wifi_resources}
+- {from: wiseconnect3_sdk, id: wiseconnect3_common}
+- {id: freertos}
+- {id: sl_system}
+other_file:
+- {path: resources/readme/energy_profiler_step_6.png}
+- {path: resources/readme/energy_profiler_step_7.png}
+- {path: resources/readme/energy_profiler_step_8.png}
+- {path: resources/readme/image185.png}
+- {path: resources/readme/image187.png}
+- {path: resources/readme/output_soc.png}
+- {path: resources/readme/power_meter_avg_current_consumption.png}
+- {path: resources/readme/power_save_current_measurement_pins.png}
+- {path: resources/readme/setup_soc_ncp.png}
+- {path: resources/readme/alarm_timer_configure.png}
+- {path: resources/readme/wakeup_configure.png}
+define:
+- {name: SL_SI91X_PRINT_DBG_LOG}
+requires:
+- condition: [si91x_common_flash]
+  name: device_needs_ram_execution
+configuration:
+- {name: SL_BOARD_ENABLE_VCOM, value: '1'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+sdk_extension:
+- {id: wiseconnect3_sdk, version: 3.1.4}
+post_build: {path: ../../SDKs/gecko_sdk_2/extension/wiseconnect/utilities/postbuild_profile/wiseconnect_soc.slpb,
+  profile: wiseconnect_soc}
+
