@@ -23,7 +23,7 @@
 #define BROADCAST_IN_TIM                1
 #define BROADCAST_TIM_TILL_NEXT_COMMAND 1
 
-void m4_sleep_wakeup(void)
+void ampak_m4_sleep_wakeup(void)
 {
   sl_status_t status = SL_STATUS_OK;
 

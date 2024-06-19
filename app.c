@@ -44,6 +44,7 @@
 #ifdef SLI_SI91X_MCU_INTERFACE
 #include "sl_si91x_m4_ps.h"
 #endif
+#include "ampak_wl72917/ampak_util.h"
 
 /******************************************************
  *                      Macros
@@ -186,7 +187,8 @@ static void application_start(void *argument)
   printf("\r\nExample Demonstration Completed\r\n");
 
 #ifdef SLI_SI91X_MCU_INTERFACE
-  sl_si91x_m4_sleep_wakeup();
+  //sl_si91x_m4_sleep_wakeup();
+  ampak_m4_sleep_wakeup();
 #endif
 }
 

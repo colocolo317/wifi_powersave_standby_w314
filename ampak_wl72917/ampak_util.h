@@ -12,6 +12,6 @@
 #define UNUSED_PARAMETER(x) (void)(x)
 #endif // UNUSED_PARAMETER
 
-void m4_sleep_wakeup(void);
+void ampak_m4_sleep_wakeup(void);
 
 #endif /* AMPAK_WL72917_AMPAK_UTIL_H_ */
