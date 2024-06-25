@@ -45,6 +45,7 @@
 #include "sl_si91x_m4_ps.h"
 #endif
 #include "ampak_wl72917/ampak_util.h"
+#include "sl_net_wifi_types.h"
 
 /******************************************************
  *                      Macros
@@ -135,6 +136,7 @@ static void application_start(void *argument)
   sl_wifi_performance_profile_t performance_profile = { .profile = ASSOCIATED_POWER_SAVE };
   sl_wifi_firmware_version_t version                = { 0 };
   sl_mac_address_t mac_addr                         = { 0 };
+  UNUSED_PARAMETER(performance_profile);
 
   status = sl_net_init(SL_NET_WIFI_CLIENT_INTERFACE, &station_init_configuration, NULL, NULL);
   if (status != SL_STATUS_OK) {
@@ -167,6 +169,21 @@ static void application_start(void *argument)
   }
   printf("\r\nWi-Fi client connected\r\n");
 
+
+  sl_net_wifi_client_profile_t client_profile = { 0 };
+  status = sl_net_get_profile(SL_NET_WIFI_CLIENT_INTERFACE, SL_NET_DEFAULT_WIFI_CLIENT_PROFILE_ID, &client_profile);
+  if (status != SL_STATUS_OK)
+  {
+    printf("Failed to get client profile: 0x%lx\r\n", status);
+    return;
+  }
+  sl_ip_address_t ip_address           = { 0 };
+  ip_address.type = SL_IPV4;
+  memcpy(&ip_address.ip.v4.bytes, &client_profile.ip.ip.v4.ip_address.bytes, sizeof(sl_ipv4_address_t));
+  print_sl_ip_address(&ip_address);
+  printf("\r\n");
+
+#if AMPAK_USE_DEFAULT_SLEEP_SETTINGS
   status = sl_wifi_filter_broadcast(BROADCAST_DROP_THRESHOLD, BROADCAST_IN_TIM, BROADCAST_TIM_TILL_NEXT_COMMAND);
   if (status != SL_STATUS_OK) {
     printf("\r\nsl_wifi_filter_broadcast Failed, Error Code : 0x%lX\r\n", status);
@@ -185,11 +202,15 @@ static void application_start(void *argument)
     return;
   }
   printf("\r\nExample Demonstration Completed\r\n");
+#endif
 
 #ifdef SLI_SI91X_MCU_INTERFACE
-  //sl_si91x_m4_sleep_wakeup();
+#if AMPAK_USE_DEFAULT_SLEEP_SETTINGS
+  sl_si91x_m4_sleep_wakeup();
+#else
   ampak_m4_sleep_wakeup();
-#endif
+#endif // AMPAK_USE_DEFAULT_SLEEP_SETTINGS
+#endif // SLI_SI91X_MCU_INTERFACE
 }
 
 sl_status_t send_data(void)
