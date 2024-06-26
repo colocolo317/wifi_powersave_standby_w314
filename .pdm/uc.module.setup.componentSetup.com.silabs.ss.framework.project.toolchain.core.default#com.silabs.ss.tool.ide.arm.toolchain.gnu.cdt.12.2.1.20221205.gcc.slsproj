@@ -2,17 +2,17 @@
 <project name="uc.module.setup.componentSetup.com.silabs.ss.framework.project.toolchain.core.default#com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:12.2.1.20221205.gcc" propertyScope="project">
   <folder name="resources">
     <folder name="readme">
-      <file name="energy_profiler_step_6.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/energy_profiler_step_6.png"/>
-      <file name="energy_profiler_step_7.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/energy_profiler_step_7.png"/>
-      <file name="energy_profiler_step_8.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/energy_profiler_step_8.png"/>
-      <file name="image185.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/image185.png"/>
-      <file name="image187.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/image187.png"/>
-      <file name="output_soc.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/output_soc.png"/>
-      <file name="power_meter_avg_current_consumption.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/power_meter_avg_current_consumption.png"/>
-      <file name="power_save_current_measurement_pins.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/power_save_current_measurement_pins.png"/>
-      <file name="setup_soc_ncp.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/setup_soc_ncp.png"/>
-      <file name="alarm_timer_configure.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/alarm_timer_configure.png"/>
-      <file name="wakeup_configure.png" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/resources/readme/wakeup_configure.png"/>
+      <file name="energy_profiler_step_6.png" linked="false" uri="studio:/project/resources/readme/energy_profiler_step_6.png"/>
+      <file name="energy_profiler_step_7.png" linked="false" uri="studio:/project/resources/readme/energy_profiler_step_7.png"/>
+      <file name="energy_profiler_step_8.png" linked="false" uri="studio:/project/resources/readme/energy_profiler_step_8.png"/>
+      <file name="image185.png" linked="false" uri="studio:/project/resources/readme/image185.png"/>
+      <file name="image187.png" linked="false" uri="studio:/project/resources/readme/image187.png"/>
+      <file name="output_soc.png" linked="false" uri="studio:/project/resources/readme/output_soc.png"/>
+      <file name="power_meter_avg_current_consumption.png" linked="false" uri="studio:/project/resources/readme/power_meter_avg_current_consumption.png"/>
+      <file name="power_save_current_measurement_pins.png" linked="false" uri="studio:/project/resources/readme/power_save_current_measurement_pins.png"/>
+      <file name="setup_soc_ncp.png" linked="false" uri="studio:/project/resources/readme/setup_soc_ncp.png"/>
+      <file name="alarm_timer_configure.png" linked="false" uri="studio:/project/resources/readme/alarm_timer_configure.png"/>
+      <file name="wakeup_configure.png" linked="false" uri="studio:/project/resources/readme/wakeup_configure.png"/>
     </folder>
   </folder>
   <folder name="wiseconnect3_sdk_3.1.4">
@@ -221,6 +221,31 @@
               </folder>
             </folder>
             <folder name="wireless">
+              <folder name="ble">
+                <folder name="src">
+                  <file name="rsi_ble_gap_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_ble_gap_apis.c"/>
+                  <file name="rsi_ble_gatt_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_ble_gatt_apis.c"/>
+                  <file name="rsi_bt_common_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_bt_common_apis.c"/>
+                  <file name="rsi_bt_ble.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_bt_ble.c"/>
+                  <file name="rsi_common_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_common_apis.c"/>
+                  <file name="rsi_utils.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_utils.c"/>
+                  <file name="sl_si91x_ble.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/sl_si91x_ble.c"/>
+                </folder>
+                <folder name="inc">
+                  <file name="rsi_ble_apis.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_ble_apis.h"/>
+                  <file name="rsi_ble_common_config.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_ble_common_config.h"/>
+                  <file name="rsi_ble.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_ble.h"/>
+                  <file name="rsi_bt_common_apis.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_bt_common_apis.h"/>
+                  <file name="rsi_bt_common_config.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_bt_common_config.h"/>
+                  <file name="rsi_bt_common.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_bt_common.h"/>
+                  <file name="rsi_common_apis.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_common_apis.h"/>
+                  <file name="rsi_common.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_common.h"/>
+                  <file name="rsi_timer.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_timer.h"/>
+                  <file name="rsi_user.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_user.h"/>
+                  <file name="rsi_utils.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_utils.h"/>
+                  <file name="sl_si91x_ble.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/sl_si91x_ble.h"/>
+                </folder>
+              </folder>
               <folder name="errno">
                 <folder name="src">
                   <file name="sl_si91x_errno.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/errno/src/sl_si91x_errno.c"/>
@@ -561,11 +586,12 @@
       </folder>
     </folder>
   </folder>
-  <file name="app.c" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/app.c"/>
-  <file name="main.c" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/main.c"/>
-  <file name="app.h" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/app.h"/>
-  <file name="readme.md" linked="false" uri="studio:/sdk/extension/wiseconnect/examples/featured/powersave_standby_associated/readme.md"/>
+  <file name="app.c" linked="false" uri="studio:/project/app.c"/>
+  <file name="main.c" linked="false" uri="studio:/project/main.c"/>
+  <file name="app.h" linked="false" uri="studio:/project/app.h"/>
+  <file name="readme.md" linked="false" uri="studio:/project/readme.md"/>
   <includePath uri="studio:/project/"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/si91x_socket"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/cmsis_driver/CMSIS/Driver/Include"/>
@@ -606,6 +632,8 @@
   <macroDefinition name="SLI_SI917" value="1"/>
   <macroDefinition name="SLI_SI917B0" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_ENABLE_FLASH_BASED_EXECUTION" value="1"/>
+  <macroDefinition name="SLI_SI91X_ENABLE_BLE"/>
+  <macroDefinition name="SL_SI91X_ENABLE_LITTLE_ENDIAN"/>
   <macroDefinition name="SLI_SI91X_MCU_COMMON_FLASH_MODE" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_CONFIG_RADIO_BOARD_BASE_VER" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_CONFIG_RADIO_BOARD_VER2" value="1"/>
